@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Визначення по номеру дня його назву</title>
+    <script type="text/javascript">
+      function numday(obj){
+        var m=Number(obj.num1.value);
+        var s;
+        switch (m){
+          case 1: s="Monday"; break;
+          case 2: s="Tuesday"; break;
+          case 3: s="Wednesday"; break;
+          case 4: s="Thursday"; break;
+          case 5: s="Friday"; break;
+          case 6: s="Saturday"; break;
+          case 7: s="Sunday"; break;
+          default: s="Помилковий номер"
+        }
+        obj.res.value=s
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      Визначення назви дня по номеру
+    </p>
+    <form name="form1">
+      Введіть номер дня: <input type="text" name="num1" size="7"><br>
+      Назва дня: <input type="button" value="Обчислити" onclick="numday(form1)">
+      <input type="text" name="res" size="10"><br>
+      <input type="reset" value="Reset" >
+    </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Точка і область</title>
+    <script type="text/javascript">
+    function point(obj){
+      var x=Number(obj.num1a.value);
+      var y=Number(obj.num2a.value);
+      var r=Number(obj.num3a.value);
+      var R=Number(obj.num4a.value);
+      var e=Math.abs(x) + Math.abs(y)
+      if ((e >=r )&&(e <=R)){
+        obj.res.value="Точка належить області"
+      }
+      else {
+        obj.res.value="Точка не належить області"
+      }
+    }
+    </script>
+  </head>
+  <body bgcolor=f8f8ff>
+    <h3>Чи належить точка заданій області?</h3>
+    <form name="form1">
+      Введіть розміри r і R:
+      r: <input type="text" name="num3a" size="7">
+      R: <input type="text" name="num4a" size="7"><br>
+      <img src="1.jpg" border="1" hspace=10 vspace=10/><br>
+      Точка:
+      x: <input type="text" name="num1a" size="7">
+      y: <input type="text" name="num2a" size="7"><br>
+      <input type="button" value="Обчислити" onclick="point(form1)"><br>
+      Результат:
+      <input type="text" name="res" size="20">
+      <input type="reset" name="Reset">
+    </form>
+  </body>
+</html>

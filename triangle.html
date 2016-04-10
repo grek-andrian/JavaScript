@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Обчислення площі трикутника</title>
+  <script type="text/javascript">
+    function care(a, h) {
+      var s = (a * h) / 2;
+      document.write("Площа прямокутного трикутника рівна:", s);
+      return s;
+    }
+  </script>
+</head>
+
+<body>
+  <p>
+    Розрахунок площі трикутника по основі та висоті
+  </p>
+  <form name="form1">
+    Основа:
+    <input type="text" name="st1" size="7">
+    <hr> Висота:
+    <input type="text" name="st2" size="7">
+    <hr>
+    <input type="button" value=Обчислити onclick="care(form1.st1.value,form1.st2.value)">
+    <input type="reset" value="Очистити">
+  </form>
+</body>
+
+</html>

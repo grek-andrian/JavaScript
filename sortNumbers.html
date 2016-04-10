@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Сортування чисел</title>
+    <script type="text/javascript">
+      function sort(obj){
+        var a = parseInt(obj.num1.value);
+        var b = parseInt(obj.num2.value);
+        var c = parseInt(obj.num3.value);
+        var d = parseInt(obj.num4.value);
+        if (a>b){r=a; a=b; b=r}
+        if (a>c){r=a; a=c; c=r}
+        if (a>d){r=a; a=d; d=r}
+        if (b>c){r=b; b=c; c=r}
+        if (b>d){r=b; b=d; d=r}
+        if (c>d){r=c; c=d; d=r}
+        obj.num1.value=a;
+        obj.num2.value=b;
+        obj.num3.value=c;
+        obj.num4.value=d;
+      }
+    </script>
+  </head>
+  <body>
+<h3>Обчислення максимального та мінімального значень</h3>
+<form name="form1">
+Число 1: <input type="text" name="num1" size="7"><hr>
+Число 2: <input type="text" name="num2" size="7"><hr>
+Число 3: <input type="text" name="num3" size="7"><hr>
+Число 4: <input type="text" name="num4" size="7"><hr>
+<input type="button" value="Посортувати" onclick="sort(form1)"><hr>
+<input type="reset" value="Очистити">
+</form>
+  </body>
+</html>

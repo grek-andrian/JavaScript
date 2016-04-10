@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Elem</title>
+    <script type="text/javascript">
+    function randElem(base) {
+      var randNumber=Math.round(Math.random()*base.num.value);
+      return randNumber;
+    };
+
+    function genArr(size){
+    randNumber=0;
+    var arr=[];
+    for (var i=0; i<size.num.value; i++){
+      arr[i]=[];
+      for (var j=0; j<size.num.value; j++){
+      arr[i][j]=randNumber;
+    }}
+      alert ("[" + arr.join("],["));
+    };
+
+    </script>
+  </head>
+  <body>
+    <h3>Введіть число для встановлення діапазону виводу рандомного числа:</h3>
+    <form name="form">
+      <input type="text" name="num" size="3">
+      <input type="button" value="Start" onclick="genArr(form)">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Площа квадрата</title>
+    <script type="text/javascript">
+      function srec(){
+        form1.res.value=form1.num1.value*form1.num1.value
+      }
+    </script>
+  </head>
+  <body>
+    <p>Розрахунок площі квадрата</p>
+    <form name="form1">
+      Сторона: <input type="text" name="num1" size="7" onChange="srec()"><hr>
+      Площа: <input type="text" name="res" size="7"><hr>
+      <input type="reset" value="Обновити">
+
+    </form>
+  </body>
+</html>

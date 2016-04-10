@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Обчислення максимального числа</title>
+    <script type="text/javascript">
+      function maxmin(obj){
+        var a = parseInt(obj.num1.value);
+        var b = parseInt(obj.num2.value);
+        var c = parseInt(obj.num3.value);
+        var l;
+        var t;
+        if (a>b) {l=b; t=a}
+        else {t=b; l=a};
+        if (c<l) l=c;
+        if (c>t) t=c
+        obj.resmax.value=t;
+        obj.resmin.value=l
+      }
+    </script>
+  </head>
+  <body>
+<h3>Обчислення максимального та мінімального значень</h3>
+<form name="form1">
+Число 1: <input type="text" name="num1" size="7"><hr>
+Число 2: <input type="text" name="num2" size="7"><hr>
+Число 3: <input type="text" name="num3" size="7"><hr>
+<input type="button" value="Обчислити" onclick="maxmin(form1)">
+Максимальне значення рівне: <input type="text" name="resmax" size="7"><hr>
+Мінімальне значення рівне: <input type="text" name="resmin" size="7"><hr>
+<input type="reset">
+</form>
+  </body>
+</html>

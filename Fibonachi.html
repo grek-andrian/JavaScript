@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Числа Фібоначі</title>
+    <script type="text/javascript">
+      function fib(obj){
+        var num=obj.data.value;
+        var f1=1;
+        var f2=1;
+        var f3=1;
+        while (num>f3){
+          f3=f1+f2; f1=f2; f2=f3
+        }
+        if (num==f3) {obj.res.value="Так"}
+        else obj.res.value="Ні"
+       }
+    </script>
+  </head>
+  <body>
+    <h3>Чи є введене значення числом Фібоначі?</h3>
+    <form name="form1">
+      <input type="text" name="data" size="8">
+      <input type="button" value="Визначити" onclick="fib(form1)"><br>
+      <input type="text" name="res" size="7"><br>
+      <input type="reset" value="Reset">
+    </form>
+  </body>
+</html>

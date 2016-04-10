@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Обчислення розміру стипендії</title>
+    <script type="text/javascript">
+      function st (obj) {
+        var a=Number(obj.num1.value);
+        var b=Number(obj.num2.value);
+        var c=Number(obj.num3.value);
+        var d=Number(obj.num4.value);
+        var l;
+        var t;
+        var m=0;
+        if (a>b) {l=b; t=a} else {l=a; t=b}
+        if (b>t) t=b; if (c>t) t=c; if(d>t) t=d;
+        if(b<l) l=b; if (c<l) l=c; if(d<l) l=d;
+        if (l==5) {m=100}
+        else if ((t==5) && (l==4)) {m=75}
+          else if ((t==4) && (l==4)) {m=50}
+          if (m==0)
+          {obj.styp.value="Вам не призначено стипендії"}
+          else obj.styp.value="Вам призначена стипендія у розмірі "+m+" доларів."
+          console.log ("Good")
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Розрахунок розміру стипендії за результатами сесії</h3>
+    <h3>Введіть отримані оцінки в будь-якому порядку</h3>
+    <form name="form1">
+      Оцінка 1: <input type="text" size="7" name="num1"><br>
+      Оцінка 2: <input type="text" size="7" name="num2"><br>
+      Оцінка 3: <input type="text" size="7" name="num3"><br>
+      Оцінка 4: <input type="text" size="7" name="num4"><br>
+      <h3>Розрахунок стипендії:</h3>
+      <input type="button" value=Розрахунок onclick="st(form1)">
+      <input type="reset" value="Відмінити"><br>
+      <input type="text" name="styp" size="50">
+          </form>
+  </body>
+</html>

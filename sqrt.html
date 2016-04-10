@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Elem</title>
+    <script type="text/javascript">
+    function sqrt(A) {
+      var start=A.num.value;
+      var error=Math.pow(10,-6);
+      while ((start - A.num.value/start) > error){
+        start = 0.5 * (start+A.num.value/start);
+      }
+      alert (start);
+    }
+      </script>
+  </head>
+  <body>
+    <h3>Введіть реальне позитивне число для обчислення кореня квадратного:</h3>
+    <form name="form">
+      <input type="text" name="num" size="3">
+      <input type="button" value="Start" onclick="sqrt(form)">
+    </form>
+  </body>
+</html>

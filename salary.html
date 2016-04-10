@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Розрахунок середньої зарплати</title>
+    <script type="text/javascript">
+      function val (obj)
+      {var a1=1*obj.num1.value;
+        var a2=1*obj.num2.value;
+        var a3=1*obj.num3.value;
+        var a4=1*obj.num4.value;
+        var a5=1*obj.num5.value;
+        var a6=1*obj.num6.value;
+        var s=(a1+a2+a3+a4+a5+a6)/6;
+        obj.res.value=s
+      }
+    </script>
+  </head>
+  <body>
+    <p>Введіть отриману зарплату за наступні місяці:
+      <form name="form1">
+        January: <input type="text" name="num1" size="8"> <br>
+        February: <input type="text" name="num2" size="8"><br>
+        March: : <input type="text" name="num3" size="8"><br>
+        April: : <input type="text" name="num4" size="8"><br>
+        May: : <input type="text" name="num5" size="8"><br>
+        June: : <input type="text" name="num6" size="8"><br>
+        Середня зарплата за півріччя: <input type="text" name="res">
+        <br>
+        <input type="button" value=Обчислити onclick="val(form1)">
+        <input type="reset" value="Обновити">
+      </form>
+    </p>
+  </body>
+</html>
