@@ -10,4 +10,4 @@ function pow (base, exp){
   }
   return result;
 }
-console.log (pow(2,0));
+console.log (pow(2,3));
